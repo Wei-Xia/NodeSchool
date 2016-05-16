@@ -43,14 +43,28 @@
 //   so using this method you'll end up with an array that has one more element
 //   than the number of newlines.
 
-
-//
 var fs = require('fs');
+
+var name = process.argv[2];
+
+var str = fs.readFileSync(name).toString().split('\n');
+
+// for (var i = 0; i)
+
+console.log(str.length-1);
+
+
+// Here's the official solution in case you want to compare notes:
 //
-// fs.readFileSync('');
-
-var data = fs.readFileSync('/Users/Wei/GitHub/NodeSchool/learnyounode/example.txt');
-
-var str = buf.toString(data);
-
-console.log(str);
+// ─────────────────────────────────────────────────────────────────────────────
+//
+//    var fs = require('fs')
+//
+//    var contents = fs.readFileSync(process.argv[2])
+//    var lines = contents.toString().split('\n').length - 1
+//    console.log(lines)
+//
+//    // note you can avoid the .toString() by passing 'utf8' as the
+//    // second argument to readFileSync, then you'll get a String!
+//    //
+//    // fs.readFileSync(process.argv[2], 'utf8').split('\n').length - 1
