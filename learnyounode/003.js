@@ -43,6 +43,14 @@
 //   so using this method you'll end up with an array that has one more element
 //   than the number of newlines.
 
-var fs = require('fs');
 
-fs.readFileSync('/Users/Wei/GitHub/NodeSchool/learnyounode/example.txt').
+//
+var fs = require('fs');
+//
+// fs.readFileSync('');
+
+var data = fs.readFileSync('/Users/Wei/GitHub/NodeSchool/learnyounode/example.txt');
+
+var str = buf.toString(data);
+
+console.log(str);
