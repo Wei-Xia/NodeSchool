@@ -49,8 +49,6 @@ var name = process.argv[2];
 
 var str = fs.readFileSync(name).toString().split('\n');
 
-// for (var i = 0; i)
-
 console.log(str.length-1);
 
 
