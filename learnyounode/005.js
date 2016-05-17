@@ -39,19 +39,33 @@
 //
 
    var fs = require('fs');
-   var path = require("path");
+   var path = require('path');
+
    var file = process.argv[2];
+   var ext = '.' + process.argv[3];
 
    fs.readdir(file, function (err, contents) {
-
-    //  var ext = path.extname(contents[1]);
-
-     var array = undefined;
-
-     for (var i = 0; i < contents.length; i++){
-       if (path.extname(contents[i]) == 'txt')
-        array.push(contents[i]);
-     console.log(array);
-   };
-
+     for (i = 0; i < contents.length; i++){
+       if (path.extname(contents[i]) == ext)
+        console.log(contents[i]);
+      };
    })
+
+ //   Here's the official solution in case you want to compare notes:
+ //
+ // ─────────────────────────────────────────────────────────────────────────────
+ //
+ //     var fs = require('fs')
+ //     var path = require('path')
+ //
+ //     var folder = process.argv[2]
+ //     var ext = '.' + process.argv[3]
+ //
+ //     fs.readdir(folder, function (err, files) {
+ //       if (err) return console.error(err)
+ //       files.forEach(function(file) {
+ //           if (path.extname(file) === ext) {
+ //               console.log(file)
+ //           }
+ //       })
+ //     })
