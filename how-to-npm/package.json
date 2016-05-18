@@ -1,0 +1,11 @@
+{
+  "name": "firstnpm",
+  "version": "1.0.0",
+  "description": "haha",
+  "main": "index.js",
+  "scripts": {
+    "test": "j"
+  },
+  "author": "wei",
+  "license": "ISC"
+}
